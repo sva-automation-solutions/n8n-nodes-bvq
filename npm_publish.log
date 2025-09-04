@@ -1,0 +1,3 @@
+ ERR_PNPM_GIT_UNCLEAN  Unclean working tree. Commit or stash changes first.
+
+If you want to disable Git checks on publish, set the "git-checks" setting to "false", or run again with "--no-git-checks".
