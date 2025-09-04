@@ -1,0 +1,53 @@
+{
+  "name": "n8n-nodes-bvq",
+  "version": "1.0.0",
+  "description": "BVQ Node that returns Data from the BVQ-API to n8n. Alerts and Events can be called.",
+  "keywords": [
+    "n8n-community-node-package"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "author": {
+    "name": "SVA System Vertrieb Alexander GmbH",
+    "email": "workflows@sva.de"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sva-automation-solutions/n8n-nodes-bvq"
+  },
+  "main": "index.js",
+  "packageManager": "pnpm@10.2.1",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "build": "tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes credentials --write",
+    "lint": "eslint nodes credentials package.json",
+    "lintfix": "eslint nodes credentials package.json --fix",
+    "prepublishOnly": "pnpm build && pnpm lint -c .eslintrc.prepublish.js nodes credentials package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/bvqApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/BVQ/Bvq.node.js"
+    ],
+    "icon": "file:Bvq.svg"
+  },
+  "devDependencies": {
+    "@typescript-eslint/parser": "^7.15.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-n8n-nodes-base": "^1.16.3",
+    "gulp": "^4.0.2",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.2"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
