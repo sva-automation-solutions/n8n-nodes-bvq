@@ -74,6 +74,6 @@ Please note that extending the time period for the requested data may result in 
 
 ## Version History
 
-### 1.0.0
+### 3.0.0
 
 - Initial release/Republish
